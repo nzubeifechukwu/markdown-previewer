@@ -14,13 +14,13 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
-  background-color: #264653;
+  background-color: #344e41;
   color: white;
   margin: 5rem 10rem 2.5rem;
 }
 
 main {
-  background-color: #2a9d8f;
+  background-color: #588157;
   border: 1px white solid;
   border-radius: 5px;
   padding: 1.5rem 3rem;
@@ -28,7 +28,7 @@ main {
 }
 
 .heading {
-  background-color: #264653;
+  background-color: #344e41;
   padding: 1rem;
   font-family: "Roboto", sans-serif;
   width: 10rem;
@@ -48,6 +48,8 @@ textarea {
   border: none;
   border-radius: 3px;
   margin-bottom: 1.5rem;
+  background-color: #a3b18a;
+  scrollbar-color: #dad7cd #3a5a40;
 }
 
 .preview {
