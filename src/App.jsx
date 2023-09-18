@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { marked } from "marked";
+import DOMPurify from "isomorphic-dompurify";
+import { defaultMarkdown } from "./utils/defaultMarkdown";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [markdown, setMarkdown] = useState(defaultMarkdown);
+
+  const handleChange = (e) => {
+    const heading = DOMPurify.sanitize(marked.parse(e.target.value));
+    setMarkdown(heading);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main>
+        <form className="editor">
+          <h3 className="heading">
+            <label htmlFor="markdown">Editor</label>
+          </h3>
+
+          <textarea
+            name="markdown"
+            id="markdown"
+            onChange={handleChange}
+            defaultValue={defaultMarkdown}
+          ></textarea>
+        </form>
+        <section className="preview">
+          <h3 className="heading">Preview</h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(marked.parse(markdown)),
+            }}
+          ></div>
+        </section>
+      </main>
+      <footer>
+        <a href="http://">&copy; Nzube Ifechukwu</a>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
