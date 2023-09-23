@@ -36,9 +36,12 @@ function App() {
         </section>
       </main>
       <footer>
-        <a href="https://github.com/nzubeifechukwu/markdown-previewer">
-          &copy; Nzube Ifechukwu
-        </a>
+        <p>
+          <a href="https://github.com/nzubeifechukwu/markdown-previewer">
+            GitHub Repo
+          </a>
+        </p>
+        <p>&copy; Nzube Ifechukwu</p>
       </footer>
     </>
   );

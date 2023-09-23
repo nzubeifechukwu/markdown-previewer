@@ -58,13 +58,21 @@ textarea {
 
 footer {
   font-family: "Roboto", sans-serif;
-  text-align: center;
   margin-top: 2rem;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
 }
 
 footer a {
   text-decoration: none;
   color: inherit;
+}
+
+footer a:hover {
+  font-size: 0.85rem;
+  transition: font-size 0.2s ease-in-out;
 }
 
 @media (min-width: 850px) {
