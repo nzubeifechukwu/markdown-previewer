@@ -6,7 +6,7 @@ The [app is live here](https://nzubeifechukwu-markdown-previewer.netlify.app/).
 
 ## Installation
 
-Quote generator is a React app. To install and run it locally, clone the repo and run:
+Markdown previewer is a React app. To install and run it locally, clone the repo and run:
 
 ```
 cd markdown-previewer
