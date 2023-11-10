@@ -13,11 +13,12 @@ function App() {
 
   return (
     <>
+      <h1 className="main-heading">Markdown Previewer</h1>
       <main>
         <form className="editor">
-          <h3 className="heading">
+          <h2 className="heading">
             <label htmlFor="markdown">Editor</label>
-          </h3>
+          </h2>
 
           <textarea
             name="markdown"
@@ -27,7 +28,7 @@ function App() {
           ></textarea>
         </form>
         <section className="preview">
-          <h3 className="heading">Preview</h3>
+          <h2 className="heading">Preview</h2>
           <div
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(marked.parse(markdown)),
@@ -38,10 +39,9 @@ function App() {
       <footer>
         <p>
           <a href="https://github.com/nzubeifechukwu/markdown-previewer">
-            GitHub Repo
+            &copy; Nzube Ifechukwu
           </a>
         </p>
-        <p>&copy; Nzube Ifechukwu</p>
       </footer>
     </>
   );
