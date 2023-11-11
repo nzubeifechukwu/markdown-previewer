@@ -38,7 +38,11 @@ function App() {
       </main>
       <footer>
         <p>
-          <a href="https://github.com/nzubeifechukwu/markdown-previewer">
+          <a
+            href="https://github.com/nzubeifechukwu/markdown-previewer"
+            target="_blank"
+            rel="noreferrer"
+          >
             &copy; Nzube Ifechukwu
           </a>
         </p>
